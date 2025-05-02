@@ -8,28 +8,41 @@
 <body>
     <h2>CATEGORIAS</h2>
     <div>
-        <form action="" method="get">
-            <label for="cadastrar">Cadastrar Categoria</label>
-            <input type="text" name="cadastrar" id="cadastrar">
+        <form action="categoria_insert.php" method="get">
+            <label for="nomeCategoria">Cadastrar Categoria</label>
+            <input type="text" name="nomeCategoria" id="nomeCategoria">
             <input type="submit" value="CADASTRAR">
         </form>
     </div>
     <div>
-        <form action="" method="get">
-            <label for="apagar">Apagar Categoria</label>
-            <input type="text" name="apagar" id="apagar">
+        <form action="categoria_delete.php" method="get">
+            <label for="apagarCategoria">Apagar Categoria</label>
+            <input type="text" name="apagarCategoria" id="apagarCategoria">
             <input type="submit" value="APAGAR">
         </form>
     </div>
     <div>
         <form action="" method="get">
-            <label for="consultar">Consultar Produtos por Categoria</label>
-            <input type="text" name="consultar" id="consultar">
+            <label for="consultarCategoria">Consultar Categorias Cadastradas</label>
+            <input type="text" name="consultarCategoria" id="consultarCategoria">
             <input type="submit" value="CONSULTAR">
         </form>
     </div>
     <div>
         <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/dashboard.php'">VOLTAR</button>
+    </div>
+    <div>
+        <table>
+            <thead>
+
+            </thead>
+            <tbody>
+
+            </tbody>
+            <tfoot>
+                
+            </tfoot>
+        </table>
     </div>
 </body>
 </html>
