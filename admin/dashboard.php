@@ -9,7 +9,7 @@
     <?php
         session_start();
         
-        echo "<p>Seja bem vindo " . $_SESSION["logado"] . "</p>";
+        echo "<p>Seja bem vindo " . $_SESSION["logado"] . "!</p>";
     ?>
     <div>
         <a href="/CRUD_LPWEBI_TRABALHO/admin/categorias/index.php">Categorias</a>

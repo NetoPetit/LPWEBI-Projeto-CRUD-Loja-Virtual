@@ -1,15 +1,16 @@
 <?php 
 
-$apagarCategoria = @$_GET['apagarCategoria'];
+    include("../conexao_banco.php");
 
-include("../conexao_banco.php");
+    $nome = @$_GET['nome'];
 
-$sql = "DELETE FROM categorias
-        WHERE
-        nome = '$apagarCategoria'";
 
-$conexao->query($sql);
+    $sql = "DELETE FROM categorias
+            WHERE
+            nome = '$nome'";
 
-header('location: index.php');
+    $conexao->query($sql);
+
+    header('location: categoria_consulta.php');
 
 ?>
