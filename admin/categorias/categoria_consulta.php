@@ -19,7 +19,9 @@
 
                     $sql = "SELECT *
                             FROM
-                            categorias";
+                            categorias
+                            ORDER BY
+                            categorias.id ASC";
             
                     $resultado = $conexao->query($sql);
 
