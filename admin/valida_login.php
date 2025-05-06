@@ -16,7 +16,7 @@
 
         if($usuario == "admin" && $senha == "1234"){
             $_SESSION["logado"] = $usuario;
-            header("location:/CRUD_LPWEBI_TRABALHO/admin/painel.php");
+            header("location:/CRUD_LPWEBI_TRABALHO/admin/dashboard.php");
         }else{
             echo "Usuário/Senha inválido.";
         }

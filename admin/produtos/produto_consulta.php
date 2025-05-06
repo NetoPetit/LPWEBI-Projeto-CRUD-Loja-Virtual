@@ -43,7 +43,7 @@
                                 <td>". $linha['preco_produto'] ."</td>
                                 <td>". $linha['nome_categoria'] ."</td>
                                 <td>
-                                    <a href='/CRUD_LPWEBI_TRABALHO/admin/produtos/produto_delete.php?produto_id=" . $linha['id_produto'] . "'>APAGAR</a>
+                                    <a href='/CRUD_LPWEBI_TRABALHO/admin/produtos/produto_delete.php?id_produto=" . $linha['id_produto'] . "'>APAGAR</a>
                                 </td>
                             </tr>";
                         

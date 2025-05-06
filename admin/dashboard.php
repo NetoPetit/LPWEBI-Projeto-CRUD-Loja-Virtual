@@ -9,7 +9,13 @@
     <?php
         session_start();
         
-        echo "<p>Seja bem vindo " . $_SESSION["logado"] . "!</p>";
+        if(isset($_SESSION["logado"])){
+            echo "<p>Seja bem vindo " . $_SESSION["logado"] . "!</p>";
+        }else{
+            echo "<p>Você precisa efetuar login para ter acesso a essa área.</p>";
+            exit;
+        }
+        
     ?>
     <div>
         <a href="/CRUD_LPWEBI_TRABALHO/admin/categorias/index.php">Categorias</a>
