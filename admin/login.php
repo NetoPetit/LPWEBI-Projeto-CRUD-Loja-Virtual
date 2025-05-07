@@ -18,6 +18,12 @@
         <div>
             <input type="submit" value="ENTRAR">
         </div>
+        <div>
+        
+    </div>
     </form>
+    <div>
+        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/categoria/index.php'">VOLTAR</button>
+    </div>
 </body>
 </html>

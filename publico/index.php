@@ -14,7 +14,7 @@
         <div>
             <table>
                 <thead>
-                    <td>Categoria</td>
+                    <td>Categorias</td>
                 </thead>
                 <tbody>
                     <?php 
