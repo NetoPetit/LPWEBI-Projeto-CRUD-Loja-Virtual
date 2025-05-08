@@ -22,21 +22,35 @@
 
                     include("../../admin/conexao_banco.php");
 
-                    $sql = "SELECT *
-                            FROM produtos
-                            WHERE categoria_id = '$id'";
+                    $sql = "SELECT
+                                produtos.id AS id_produto,
+                                produtos.nome AS nome_produto,
+                                produtos.preco AS preco_produto,
+                                categorias.nome AS nome_categoria
+                            FROM
+                                produtos
+                            JOIN
+                                categorias
+                            ON
+                                produtos.categoria_id = categorias.id
+                            WHERE 
+                                produtos.categoria_id = '$id'
+                            ORDER BY
+                                produtos.id ASC";
+            
                     $resultado = $conexao->query($sql);
 
                     foreach($resultado as $linha){
                         echo "
                             <tr>
-                                <td>".$linha['id']."</td>
-                                <td>".$linha['nome']."</td>
-                                <td>".$linha['categoria_id']."</td>
-                                <td>".$linha['preco']."</td>
+                                <td>". $linha['id_produto'] ."</td>
+                                <td>". $linha['nome_produto'] ."</td>
+                                <td>". $linha['nome_categoria'] ."</td>
+                                <td>". $linha['preco_produto'] ."</td>
                                 <td>Em construção</td>
                                 <td>Em construção</td>
                             </tr>";
+                        
                     }
                 ?>
                 
