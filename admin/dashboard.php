@@ -29,5 +29,8 @@
     <div>
         <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/encerrar_sessao.php'">SAIR</button>
     </div>
+    <div>
+        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'">VOLTAR</button>
+    </div>
 </body>
 </html>

@@ -6,6 +6,14 @@
     <title>Login</title>
 </head>
 <body>
+    <?php
+        session_start();
+        
+        if(isset($_SESSION["logado"])){
+            header("location:/CRUD_LPWEBI_TRABALHO/admin/dashboard.php");
+        }
+        
+    ?>
     <form action="valida_login.php" method="post">
         <div></div>
             <label for="usuario">Usuário</label>
