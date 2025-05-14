@@ -48,7 +48,7 @@
                                 <td>". $linha['nome_categoria'] ."</td>
                                 <td>". $linha['preco_produto'] ."</td>
                                 <td>Em construção</td>
-                                <td>Em construção</td>
+                                <td><a href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/adiciona_carrinho.php?id=".$linha['id_produto']."'>Adicionar ao carrinho</a></td>
                             </tr>";
                         
                     }

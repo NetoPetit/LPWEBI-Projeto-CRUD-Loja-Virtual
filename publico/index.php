@@ -11,7 +11,7 @@
     </div>
     <div>
         <div>
-            <button>Carrinho</button>
+            <button onclick="javascript:location.href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/carrinho.php'">Carrinho</button>
         </div>
         <div>
             <form action="/CRUD_LPWEBI_TRABALHO/publico/produto/pesquisa_pelo_nome.php" method="get">
