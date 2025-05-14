@@ -23,7 +23,7 @@
     </div>
     </form>
     <div>
-        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/categoria/index.php'">VOLTAR</button>
+        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'">VOLTAR</button>
     </div>
 </body>
 </html>

@@ -26,5 +26,8 @@
     <div>
         <a href="/CRUD_LPWEBI_TRABALHO/admin/vendas/index.php">Vendas</a>
     </div>
+    <div>
+        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/encerrar_sessao.php'">SAIR</button>
+    </div>
 </body>
 </html>

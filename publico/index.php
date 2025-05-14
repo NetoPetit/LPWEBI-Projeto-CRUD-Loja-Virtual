@@ -10,7 +10,20 @@
         <h2>Loja Virtual</h2>
     </div>
     <div>
-        <h3>Escolha a categoria do produto</h3>
+        <div>
+            <button>Carrinho</button>
+        </div>
+        <div>
+            <form action="/CRUD_LPWEBI_TRABALHO/publico/produto/pesquisa_pelo_nome.php" method="get">
+                <label for="pesquisa">Pesquise o produto pelo nome</label>
+                <input type="text" name="pesquisa" id="pesquisa">
+                <input type="submit" value="PESQUISAR">
+            </form>
+        </div>
+        
+        <div>
+            <h3>Escolha a categoria do produto</h3>
+        </div>
         <div>
             <table>
                 <thead>
@@ -39,6 +52,9 @@
             </table>
             
         </div>
+    </div>
+    <div>
+        <a href="/CRUD_LPWEBI_TRABALHO/admin/login.php">⚙️</a>
     </div>
 </body>
 </html>
