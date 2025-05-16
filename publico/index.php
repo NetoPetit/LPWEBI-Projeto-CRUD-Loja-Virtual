@@ -44,7 +44,7 @@
                                     <td>
                                         <a href='/CRUD_LPWEBI_TRABALHO/publico/categoria/categoria_consulta.php?id=" . $linha['id'] . "'>" . $linha['nome'] . "</a>
                                     </td>
-                                </tr>";
+                                </tr>";           
                         }
 
                     ?>

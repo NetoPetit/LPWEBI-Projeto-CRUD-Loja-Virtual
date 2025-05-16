@@ -31,11 +31,6 @@
                         '%$pesquisa%'
                     ORDER BY
                         produtos.id ASC";
-                
-                    $resultado = $conexao->query($sql);
-                    echo "<pre>";
-                    var_dump($resultado);
-                    echo "</pre>";
 
             if($resultado->num_rows > 0){
                 echo "

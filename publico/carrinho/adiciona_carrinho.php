@@ -1,23 +1,15 @@
 <?php 
-    $id = $_GET['id'];
+    include('../../admin/conexao_banco.php');
+    include('carrinho_funcoes.php');
+
+    $id_categoria = $_GET['id_categoria'] ?? 0;
+
+    adicionarAoCarrinho($_GET['id']);
+    header("location:/CRUD_LPWEBI_TRABALHO/publico/categoria/categoria_consulta.php?id=$id_categoria"); 
+    exit;
     
-    include("../../admin/conexao_banco.php");
 
-    $sql = "SELECT
-            *
-            FROM
-            produtos
-            JOIN
-            categorias
-            ON
-            produtos.categoria_id = categorias.id
-            WHERE
-            produtos.categoria_id = '$id'";
-    $resultado = $conexao->query($sql);
 
-    $carrinho = [$resultado];
-    echo "<pre>";
-    var_dump($carrinho);
-    echo "</pre>";
+
 
 ?>

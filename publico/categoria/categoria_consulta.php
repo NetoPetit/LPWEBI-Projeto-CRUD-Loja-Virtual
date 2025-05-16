@@ -18,7 +18,7 @@
             </thead>
             <tbody>
                 <?php 
-                    $id = $_GET['id'];
+                    $id = $_GET['id'] ?? 0;
 
                     include("../../admin/conexao_banco.php");
 
@@ -40,6 +40,11 @@
             
                     $resultado = $conexao->query($sql);
 
+                    session_start();
+                    echo "<pre>";
+                    var_dump($_SESSION['carrinho']);
+                    echo "</pre>";
+
                     foreach($resultado as $linha){
                         echo "
                             <tr>
@@ -48,7 +53,7 @@
                                 <td>". $linha['nome_categoria'] ."</td>
                                 <td>". $linha['preco_produto'] ."</td>
                                 <td>Em construção</td>
-                                <td><a href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/adiciona_carrinho.php?id=".$linha['id_produto']."'>Adicionar ao carrinho</a></td>
+                                <td><a href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/adiciona_carrinho.php?id=".$linha['id_produto']."&id_categoria=$id'>Adicionar ao carrinho</a></td>
                             </tr>";
                         
                     }
@@ -62,6 +67,9 @@
     </div>
     <div>
         <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'">VOLTAR</button>
+    </div>
+    <div>
+        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/carrinho.php'">VER CARRINHO</button>
     </div>
 </body>
 </html>
