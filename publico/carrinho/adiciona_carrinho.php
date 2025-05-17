@@ -8,8 +8,4 @@
     header("location:/CRUD_LPWEBI_TRABALHO/publico/categoria/categoria_consulta.php?id=$id_categoria"); 
     exit;
     
-
-
-
-
 ?>

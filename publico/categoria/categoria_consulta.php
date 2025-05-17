@@ -40,11 +40,6 @@
             
                     $resultado = $conexao->query($sql);
 
-                    session_start();
-                    echo "<pre>";
-                    var_dump($_SESSION['carrinho']);
-                    echo "</pre>";
-
                     foreach($resultado as $linha){
                         echo "
                             <tr>
