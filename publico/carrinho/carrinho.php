@@ -1,29 +1,3 @@
-<?php
-    include('../../admin/conexao_banco.php');
-    include('carrinho_funcoes.php');
-
-    // Atualizar quantidades
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        foreach ($_POST['quantidade'] as $produto_id => $quantidade) {
-            atualizarCarrinho($produto_id, intval($quantidade));
-        }
-        header("Location: carrinho.php");
-        exit;
-    }
-
-    // Obter produtos do carrinho
-    $carrinho = $_SESSION['carrinho'];
-    $total = 0.0;
-
-    echo "<h2>🛒 Carrinho de Compras</h2>";
-
-    if (empty($carrinho)) {
-        echo "<p>Seu carrinho está vazio.</p>";
-        echo "<a href='/CRUD_LPWEBI_TRABALHO/publico/index.php'>Voltar à loja</a>";
-        exit;
-    }
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -32,6 +6,33 @@
     <title>Carrinho</title>
 </head>
 <body>
+    <h2>🛒 Carrinho de Compras</h2>
+
+    <?php 
+        include('../../admin/conexao_banco.php');
+        include('carrinho_funcoes.php');
+
+        // Atualizar quantidades
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            foreach ($_POST['quantidade'] as $produto_id => $quantidade) {
+                atualizarCarrinho($produto_id, intval($quantidade));
+            }
+            header("Location: carrinho.php");
+            exit;
+        }
+
+        // Obter produtos do carrinho
+        $carrinho = $_SESSION['carrinho'];
+        $total = 0.0;
+        
+        if (empty($carrinho)) {
+            echo "
+                <p>Seu carrinho está vazio.</p>
+                <a href='/CRUD_LPWEBI_TRABALHO/publico/index.php'>Voltar à loja</a>";
+            exit;
+        }
+    ?>
+
     <form method='post'>
         <table border='1' cellpadding='10'>
             <tr>
@@ -43,10 +44,16 @@
             </tr>
 
             <?php 
+
                 foreach ($carrinho as $produto_id => $quantidade) {
-                    $sql = "SELECT * FROM produtos WHERE id = $produto_id";
-                    $result = mysqli_query($conexao, $sql);
-                    $produto = mysqli_fetch_assoc($result);
+                    $sql = "SELECT 
+                                * 
+                            FROM 
+                                produtos 
+                            WHERE 
+                                id = $produto_id";
+                    $resultado = $conexao->query($sql);
+                    $produto = mysqli_fetch_assoc($resultado);
 
                     $subtotal = $produto['preco'] * $quantidade;
                     $total += $subtotal;

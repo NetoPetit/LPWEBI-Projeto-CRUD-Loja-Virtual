@@ -28,5 +28,5 @@
 
     echo "<h2>✅ Compra finalizada com sucesso!</h2>";
     echo "<p>Número da venda: $venda_id</p>";
-    echo "<a href='index.php'>Voltar à loja</a> | <a href='vendas.php'>Ver minhas compras</a>";
+    echo "<a href='/CRUD_LPWEBI_TRABALHO/publico/index.php'>Voltar à loja</a> | <a href='/CRUD_LPWEBI_TRABALHO/admin/vendas/vendas.php'>Ver minhas compras</a>";
 ?>

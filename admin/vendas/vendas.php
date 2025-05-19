@@ -38,3 +38,9 @@
         echo "</div>";
     }
 ?>
+<div>
+        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'">VOLTAR A LOJA</button>
+</div>
+<div>
+        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/dashboard.php'">VOLTAR AO PAINEL</button>
+</div>
