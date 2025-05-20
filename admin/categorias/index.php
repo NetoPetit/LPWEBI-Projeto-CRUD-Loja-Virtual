@@ -6,6 +6,11 @@
     <title>Categorias</title>
 </head>
 <body>
+    
+    <?php 
+        include("../valida_session.php");
+    ?>
+
     <h2>CATEGORIAS</h2>
     <div>
         <form action="categoria_cadastro.php" method="get">

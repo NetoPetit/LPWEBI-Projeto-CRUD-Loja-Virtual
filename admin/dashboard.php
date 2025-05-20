@@ -6,17 +6,11 @@
     <title>Dashboard</title>
 </head>
 <body>
+    
     <?php
-        session_start();
-        
-        if(isset($_SESSION["logado"])){
-            echo "<p>Seja bem vindo " . $_SESSION["logado"] . "!</p>";
-        }else{
-            echo "<p>Você precisa efetuar login para ter acesso a essa área.</p>";
-            exit;
-        }
-        
+        include("valida_session.php");
     ?>
+    
     <div>
         <a href="/CRUD_LPWEBI_TRABALHO/admin/categorias/index.php">Categorias</a>
     </div>

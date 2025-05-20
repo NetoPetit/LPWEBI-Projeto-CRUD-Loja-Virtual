@@ -6,6 +6,11 @@
     <title>Histórico de Vendas</title>
 </head>
 <body>
+
+    <?php 
+        include("../valida_session.php");
+    ?>
+    
     <div>
             <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'">VOLTAR A LOJA</button>
     </div>

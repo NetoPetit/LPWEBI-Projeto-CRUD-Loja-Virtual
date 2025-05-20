@@ -6,6 +6,11 @@
     <title>Produtos</title>
 </head>
 <body>
+
+    <?php 
+        include("../valida_session.php");
+    ?>
+    
     <h2>CADASTRO DE PRODUTOS</h2>
     <div>
         <form action="produto_cadastro.php" method="get">
