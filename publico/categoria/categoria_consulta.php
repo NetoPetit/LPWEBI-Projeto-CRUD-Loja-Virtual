@@ -6,6 +6,14 @@
     <title>Produtos</title>
 </head>
 <body>
+    <?php 
+        $id = $_GET['id'] ?? 0;
+
+        if($id == 0){
+            echo "Categoria não encontrada";
+            exit;
+        }
+    ?>
     <div>
         <table>
             <thead>
@@ -18,8 +26,7 @@
             </thead>
             <tbody>
                 <?php 
-                    $id = $_GET['id'] ?? 0;
-
+                    
                     include("../../admin/conexao_banco.php");
 
                     $sql = "SELECT
