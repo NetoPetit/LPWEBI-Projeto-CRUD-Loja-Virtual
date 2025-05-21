@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CRUD_LPWEBI_TRABALHO/assets/css/estilo.css">
 </head>
 <body>
     <?php 
@@ -14,15 +16,20 @@
             exit;
         }
     ?>
-    <div>
-        <table>
-            <thead>
-                <td>Id</td>
-                <td>Nome do Produto</td>
-                <td>Categoria</td>
-                <td>Preço</td>
-                <td>Detalhes</td>
-                <td>Comprar</td>
+    <div class="container carrinho-container">
+
+        <h1 class="text-center">Produtos da Categoria</h1>
+
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <td>Id</td>
+                    <td>Nome do Produto</td>
+                    <td>Categoria</td>
+                    <td>Preço</td>
+                    <td>Detalhes</td>
+                    <td>Comprar</td>
+                </tr>
             </thead>
             <tbody>
                 <?php 
@@ -55,7 +62,7 @@
                                 <td>". $linha['nome_categoria'] ."</td>
                                 <td>". $linha['preco_produto'] ."</td>
                                 <td>Em construção</td>
-                                <td><a href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/adiciona_carrinho.php?id=".$linha['id_produto']."&id_categoria=$id'>Adicionar ao carrinho</a></td>
+                                <td><a href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/adiciona_carrinho.php?id=".$linha['id_produto']."&id_categoria=$id'class='btn btn-primary'>Adicionar ao carrinho</a></td>
                             </tr>";
                         
                     }
@@ -66,12 +73,11 @@
 
             </tfoot>
         </table>
-    </div>
-    <div>
-        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'">VOLTAR</button>
-    </div>
-    <div>
-        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/carrinho.php'">VER CARRINHO</button>
+    
+        <div class="d-flex justify-content-between">
+            <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'" class="btn btn-secondary">VOLTAR</button>
+            <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/carrinho.php'" class="btn btn-success">VER CARRINHO</button>
+        </div>
     </div>
 </body>
 </html>

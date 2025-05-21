@@ -4,57 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CRUD_LPWEBI_TRABALHO/assets/css/estilo.css">
 </head>
 <body>
-    <div>
-        <h2>Loja Virtual</h2>
-    </div>
-    <div>
+    <div class="container carrinho-container">
         <div>
-            <button onclick="javascript:location.href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/carrinho.php'">Carrinho</button>
+            <h1 class="text-center">Loja Virtual</h1>
         </div>
         <div>
-            <form action="/CRUD_LPWEBI_TRABALHO/publico/produto/pesquisa_pelo_nome.php" method="get">
-                <label for="pesquisa">Pesquise o produto pelo nome</label>
-                <input type="text" name="pesquisa" id="pesquisa">
-                <input type="submit" value="PESQUISAR">
-            </form>
-        </div>
-        
-        <div>
-            <h3>Escolha a categoria do produto</h3>
-        </div>
-        <div>
-            <table>
-                <thead>
-                    <td>Categorias</td>
-                </thead>
-                <tbody>
-                    <?php 
-                        include("../admin/conexao_banco.php");
-
-                        $sql = "SELECT id, nome
-                                FROM
-                                categorias";
-                        $resultado = $conexao->query($sql);
-
-                        foreach($resultado as $linha){
-                            echo "
-                                <tr>
-                                    <td>
-                                        <a href='/CRUD_LPWEBI_TRABALHO/publico/categoria/categoria_consulta.php?id=" . $linha['id'] . "'>" . $linha['nome'] . "</a>
-                                    </td>
-                                </tr>";           
-                        }
-
-                    ?>
-                </tbody>
-            </table>
+            <div class="carrinho-total">
+                <button onclick="javascript:location.href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/carrinho.php'" class="btn btn-success">CARRINHO</button>
+            </div>
+            <div>
+                <form action="/CRUD_LPWEBI_TRABALHO/publico/produto/pesquisa_pelo_nome.php" method="get">
+                    <label for="pesquisa"><strong>Pesquise o produto pelo nome</strong></label>
+                    <input type="text" name="pesquisa" id="pesquisa">
+                    <input type="submit" value="PESQUISAR" class="btn btn-secondary">
+                </form>
+            </div>
             
+            <div>
+                <h3>Escolha a categoria do produto</h3>
+            </div>
+            <div>
+                <table class="table table-bordered table-hover">
+                    <thead class="table-dark">
+                        <td><h4>Categorias</h4></td>
+                    </thead>
+                    <tbody>
+                        <?php 
+                            include("../admin/conexao_banco.php");
+
+                            $sql = "SELECT id, nome
+                                    FROM
+                                    categorias";
+                            $resultado = $conexao->query($sql);
+
+                            foreach($resultado as $linha){
+                                echo "
+                                    <tr>
+                                        <td>
+                                            <h5><a href='/CRUD_LPWEBI_TRABALHO/publico/categoria/categoria_consulta.php?id=" . $linha['id'] . "'>" . $linha['nome'] . "</a></h5>
+                                        </td>
+                                    </tr>";           
+                            }
+
+                        ?>
+                    </tbody>
+                </table>
+                
+            </div>
         </div>
-    </div>
-    <div>
-        <a href="/CRUD_LPWEBI_TRABALHO/admin/login.php">⚙️</a>
+        <div>
+            <a href="/CRUD_LPWEBI_TRABALHO/admin/index.php" class="btn btn-primary">ENTRAR</a>
+        </div>
     </div>
 </body>
 </html>
