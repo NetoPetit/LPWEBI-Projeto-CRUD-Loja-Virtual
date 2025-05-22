@@ -11,6 +11,7 @@
 
         
             $pesquisa = $_GET['pesquisa'];
+            $id = $_GET['id'] ?? 0;
 
             include("../../admin/conexao_banco.php");
 
@@ -31,6 +32,7 @@
                         '%$pesquisa%'
                     ORDER BY
                         produtos.id ASC";
+            $resultado = $conexao->query($sql);
 
             if($resultado->num_rows > 0){
                 echo "
@@ -53,7 +55,7 @@
                                         <td>". $linha['nome_categoria'] ."</td>
                                         <td>". $linha['preco_produto'] ."</td>
                                         <td>Em construção</td>
-                                        <td>Em construção</td>
+                                        <td><a href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/pesquisa_adiciona_carrinho.php?id=".$linha['id_produto']."&nome_produto=$pesquisa'class='btn btn-primary'>Adicionar ao carrinho</a></td>
                                     </tr>";
                             }
 
@@ -69,6 +71,7 @@
     ?>
     <div>
         <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'">VOLTAR</button>
+        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/carrinho.php'" class="btn btn-success">VER CARRINHO</button>
     </div>
     
 </body>

@@ -22,6 +22,6 @@
         }
 
     ?>
-    <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/login.php'">VOLTAR</button>
+    <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/index.php'">VOLTAR</button>
 </body>
 </html>
