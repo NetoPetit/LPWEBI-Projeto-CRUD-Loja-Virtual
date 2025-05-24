@@ -1,5 +1,5 @@
 <?php 
-    include('../../admin/conexao_banco.php');
+    include('../conexao_banco_publico.php');
     include('carrinho_funcoes.php');
 
     $nome_produto = $_GET['nome_produto'] ?? 0;

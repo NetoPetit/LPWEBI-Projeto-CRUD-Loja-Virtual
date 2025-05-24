@@ -6,7 +6,10 @@
     <title>Consulta de Produtos</title>
 </head>
 <body>
-<div>
+    <?php 
+        include("../conexao_banco.php");
+    ?>
+    <div>
         <table>
             <thead>
                 <td>Id</td>
@@ -17,8 +20,7 @@
             </thead>
             <tbody>
                 <?php 
-                    include("../conexao_banco.php");
-
+                    
                     $sql = "SELECT
                             produtos.id AS id_produto,
                             produtos.nome AS nome_produto,

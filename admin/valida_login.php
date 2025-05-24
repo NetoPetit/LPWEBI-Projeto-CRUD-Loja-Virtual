@@ -8,11 +8,11 @@
 <body>
     
     <?php 
-
+        
         session_start();
 
-        $usuario = $_POST['usuario'];
-        $senha = $_POST['senha'];
+        $usuario = $_POST['usuario'] ?? "default";
+        $senha = $_POST['senha'] ?? "default";
 
         if($usuario == "admin" && $senha == "1234"){
             $_SESSION["logado"] = $usuario;

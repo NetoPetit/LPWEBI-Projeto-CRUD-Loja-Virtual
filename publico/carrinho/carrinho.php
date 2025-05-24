@@ -12,7 +12,7 @@
         <h2 class="mb-4">Itens no Carrinho</h2>
 
         <?php 
-            include('../../admin/conexao_banco.php');
+            include('../conexao_banco_publico.php');
             include('carrinho_funcoes.php');
 
             // Atualizar quantidades

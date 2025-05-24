@@ -13,7 +13,7 @@
             $pesquisa = $_GET['pesquisa'];
             $id = $_GET['id'] ?? 0;
 
-            include("../../admin/conexao_banco.php");
+            include("../conexao_banco_publico.php");
 
             $sql = "SELECT
                         produtos.id AS id_produto,

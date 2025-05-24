@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php
-        include('../../admin/conexao_banco.php');
+        include('../conexao_banco_publico.php');
         include('carrinho_funcoes.php');
 
         if (empty($_SESSION['carrinho'])) {

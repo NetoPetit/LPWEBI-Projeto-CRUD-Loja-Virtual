@@ -8,7 +8,7 @@
 <body>
 
     <?php 
-        include("../valida_session.php");
+        include('../conexao_banco.php');
     ?>
     
     <div>
@@ -21,8 +21,6 @@
     <h2>Histórico de Vendas</h2>
 
     <?php
-        include('../conexao_banco.php');
-
         // Consulta todas as vendas
         $sql_vendas = "SELECT 
                         * 
@@ -30,7 +28,7 @@
                             vendas 
                         ORDER BY 
                             id 
-                        ASC";
+                        DESC";
         $resultado_vendas = $conexao->query($sql_vendas);
 
         if (mysqli_num_rows($resultado_vendas) == 0) {

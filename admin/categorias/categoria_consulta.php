@@ -6,6 +6,9 @@
     <title>Consulta de Categorias</title>
 </head>
 <body>
+    <?php 
+        include("../conexao_banco.php");
+    ?>
     <div>
         <table>
             <thead>
@@ -15,8 +18,7 @@
             </thead>
             <tbody>
                 <?php 
-                    include("../conexao_banco.php");
-
+                    
                     $sql = "SELECT *
                             FROM
                             categorias

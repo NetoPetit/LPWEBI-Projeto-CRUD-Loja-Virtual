@@ -5,9 +5,10 @@
     $produto_id = @$_GET['id_produto'];
 
 
-    $sql = "DELETE FROM produtos
+    $sql = "DELETE FROM 
+                produtos
             WHERE
-            id = '$produto_id'";
+                id = '$produto_id'";
 
     $conexao->query($sql);
 

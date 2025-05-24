@@ -34,7 +34,7 @@
                     </thead>
                     <tbody>
                         <?php 
-                            include("../admin/conexao_banco.php");
+                            include("conexao_banco_publico.php");
 
                             $sql = "SELECT id, nome
                                     FROM
