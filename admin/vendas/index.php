@@ -66,6 +66,8 @@
                 }
             echo "</ul>
                 <strong>Total: R$" . number_format($total, 2, ',', '.') . "</strong>
+                <br/>
+                <a>APAGAR</a>
             </div>";
         }
     ?>

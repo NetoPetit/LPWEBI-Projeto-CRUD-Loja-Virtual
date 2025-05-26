@@ -61,7 +61,7 @@
                                 <td>". $linha['nome_produto'] ."</td>
                                 <td>". $linha['nome_categoria'] ."</td>
                                 <td>". $linha['preco_produto'] ."</td>
-                                <td><a href='/CRUD_LPWEBI_TRABALHO/publico/produto/descricao_produto.php'>Descrição</a></td>
+                                <td><a href='/CRUD_LPWEBI_TRABALHO/publico/produto/descricao_produto.php?produto=". $linha['nome_produto'] ."&id_categoria=$id'>Descrição</a></td>
                                 <td><a href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/adiciona_carrinho.php?id=".$linha['id_produto']."&id_categoria=$id'class='btn btn-primary'>Adicionar ao carrinho</a></td>
                             </tr>";
                         

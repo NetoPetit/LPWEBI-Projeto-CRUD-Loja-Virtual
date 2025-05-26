@@ -21,9 +21,9 @@
                     
                     $sql = "SELECT *
                             FROM
-                            categorias
+                                categorias
                             ORDER BY
-                            categorias.id ASC";
+                                categorias.id ASC";
             
                     $resultado = $conexao->query($sql);
 
@@ -33,7 +33,7 @@
                                 <td>" . $linha['id'] . "</td>
                                 <td>". $linha['nome'] ."</td>
                                 <td>
-                                    <a href='/CRUD_LPWEBI_TRABALHO/admin/categorias/categoria_delete.php?nome=" . $linha['nome'] . "'>APAGAR</a>
+                                    <a href='/CRUD_LPWEBI_TRABALHO/admin/categorias/categoria_delete.php?id=" . $linha['id'] . "'>APAGAR</a>
                                 </td>
                             </tr>";
                         
