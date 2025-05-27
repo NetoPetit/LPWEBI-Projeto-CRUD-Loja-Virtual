@@ -19,7 +19,7 @@
             <div>
                 <form action="/CRUD_LPWEBI_TRABALHO/publico/produto/pesquisa_pelo_nome.php" method="get">
                     <label for="pesquisa"><strong>Pesquise o produto pelo nome</strong></label>
-                    <input type="text" name="pesquisa" id="pesquisa">
+                    <input type="text" name="pesquisa" id="pesquisa" placeholder="Nome do produto...">
                     <input type="submit" value="PESQUISAR" class="btn btn-secondary">
                 </form>
             </div>

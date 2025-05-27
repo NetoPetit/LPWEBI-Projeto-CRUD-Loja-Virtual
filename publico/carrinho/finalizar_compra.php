@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finalizar Venda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CRUD_LPWEBI_TRABALHO/assets/css/estilo.css">
 </head>
 <body>
     <?php
@@ -12,8 +14,9 @@
 
         if (empty($_SESSION['carrinho'])) {
             echo "
-                <p>Seu carrinho está vazio.</p>
-                <a href='/CRUD_LPWEBI_TRABALHO/publico/index.php'>Voltar à loja</a>";
+                <h1>Aviso!</h1>
+                <div class='alert alert-warning'>Seu carrinho está vazio.</div>
+                <a href='/CRUD_LPWEBI_TRABALHO/publico/index.php' class='btn btn-secondary'>Voltar à loja</a>";
             exit;
         }
 
@@ -43,11 +46,12 @@
 
     ?>
     
-    <h2>Compra finalizada com sucesso!</h2>
-    <p>Número da venda: <?=$venda_id?></p>
-    <h2>Obrigado por comprar conosco!</h2>
-    <a href='/CRUD_LPWEBI_TRABALHO/publico/index.php'>Voltar à loja</a>
-    
+    <div class="container carrinho-container">
+        <h2>Compra finalizada com sucesso!</h2>
+        <p>Número da venda: <strong><?=$venda_id?></strong></p>
+        <h2>Obrigado por comprar conosco!</h2>
+        <a href='/CRUD_LPWEBI_TRABALHO/publico/index.php' class="btn btn-secondary">Voltar à loja</a>
+    </div>
 </body>
 </html>
 

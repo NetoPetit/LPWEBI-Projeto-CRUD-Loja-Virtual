@@ -1,6 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CRUD_LPWEBI_TRABALHO/assets/css/estilo.css">
+</head>
+<body>
+    
+</body>
+</html>
 <?php 
-    $produto = $_GET['produto'];
-    $id = $_GET['id_categoria'];
+    $produto = $_GET['produto'] ?? null;
+    $id = $_GET['id_categoria'] ?? null;
 
     if($produto == "boneca"){
         echo "
@@ -32,10 +45,8 @@
             </div>
         ";
     }else{
-        echo "<p>Sem descrição.</p>";
+        echo "<p><strong>Este produto não contém descrição.</strong></p>";
     }
 
-    echo "
-        <a href='/CRUD_LPWEBI_TRABALHO/publico/categoria/categoria_consulta.php?id=$id'>VOLTAR</a>
-    "
+    echo "<a href='javascript:history.go(-1)' class='btn btn-secondary'>VOLTAR</a>";
 ?>
