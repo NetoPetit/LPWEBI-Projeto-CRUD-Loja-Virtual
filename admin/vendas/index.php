@@ -67,7 +67,7 @@
             echo "</ul>
                 <strong>Total: R$" . number_format($total, 2, ',', '.') . "</strong>
                 <br/>
-                <a>APAGAR</a>
+                <a href='venda_delete.php?venda_id=" . $venda['id'] . "'>APAGAR</a>
             </div>";
         }
     ?>

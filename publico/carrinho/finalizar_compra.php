@@ -47,7 +47,6 @@
     <p>Número da venda: <?=$venda_id?></p>
     <h2>Obrigado por comprar conosco!</h2>
     <a href='/CRUD_LPWEBI_TRABALHO/publico/index.php'>Voltar à loja</a>
-    <a href='/CRUD_LPWEBI_TRABALHO/admin/vendas/index.php'>Ver minhas compras</a>
     
 </body>
 </html>
