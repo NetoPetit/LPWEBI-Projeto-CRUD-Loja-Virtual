@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valida Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CRUD_LPWEBI_TRABALHO/assets/css/estilo.css">
 </head>
 <body>
     
@@ -18,10 +20,14 @@
             $_SESSION["logado"] = $usuario;
             header("location:/CRUD_LPWEBI_TRABALHO/admin/dashboard.php");
         }else{
-            echo "Usuário/Senha inválido.";
+            echo "
+                <div class='alert alert-danger'>
+                    Usuário/Senha inválido.
+                </div>
+                ";
         }
 
     ?>
-    <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/index.php'">VOLTAR</button>
+    <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/index.php'" class="btn btn-secondary">VOLTAR</button>
 </body>
 </html>

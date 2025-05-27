@@ -12,7 +12,7 @@
     <?php
         include("valida_session.php");
     ?>
-    
+    <br/>
     <div>
         <h4><a href="/CRUD_LPWEBI_TRABALHO/admin/categorias/index.php">Categorias</a></h4>
     </div>
@@ -26,8 +26,14 @@
     </div>
     <br/>
     <div>
+        <h4><a href="/CRUD_LPWEBI_TRABALHO/publico/index.php">Loja</a></h4>
+    </div>
+    <br/>
+    <!--
+    <div>
         <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'" class="btn btn-secondary">VOLTAR</button>
     </div>
+    -->
     <br/>
     <div>
         <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/encerrar_sessao.php'" class="btn btn-danger">SAIR</button>
