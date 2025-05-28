@@ -17,23 +17,23 @@
         
     ?>
     <form action="valida_login.php" method="post">
-        <div></div>
+        <div>
             <label for="usuario">Usuário</label>
             <input type="text" name="usuario" id="usuario">
         </div>
+        <br/>
         <div>
             <label for="senha">Senha</label>
             <input type="password" name="senha" id="senha">
         </div>
+        <br/>
         <div>
-            <input type="submit" value="ENTRAR">
+            <input type="submit" value="ENTRAR" class="btn btn-success">
         </div>
-        <div>
-        
-    </div>
     </form>
+    <br/>
     <div>
-        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'">VOLTAR</button>
+        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'" class="btn btn-secondary">VOLTAR</button>
     </div>
 </body>
 </html>

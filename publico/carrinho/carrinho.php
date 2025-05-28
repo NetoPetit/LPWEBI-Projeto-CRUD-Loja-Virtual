@@ -31,7 +31,7 @@
             if (empty($carrinho)) {
                 echo "
                     <div class='alert alert-warning'>Seu carrinho está vazio.</div>
-                    <a href='/CRUD_LPWEBI_TRABALHO/publico/index.php' class='btn btn-secondary'>Voltar à loja</a>";
+                    <a href='/CRUD_LPWEBI_TRABALHO/publico/index.php' class='btn btn-secondary'>Voltar a loja</a>";
                 exit;
             }
         ?>
