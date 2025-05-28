@@ -48,7 +48,7 @@
                                 <tr>
                                     <td>". $linha['id_produto'] ."</td>
                                     <td>". $linha['nome_produto'] ."</td>
-                                    <td>". $linha['preco_produto'] ."</td>
+                                    <td>R$". $linha['preco_produto'] ."</td>
                                     <td>". $linha['nome_categoria'] ."</td>
                                     <td>
                                         <a href='/CRUD_LPWEBI_TRABALHO/admin/produtos/produto_delete.php?id_produto=" . $linha['id_produto'] . "' class='btn btn-danger'>APAGAR</a>
