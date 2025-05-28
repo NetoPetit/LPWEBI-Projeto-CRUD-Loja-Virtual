@@ -14,19 +14,21 @@
         </div>
         <div>
             <div class="carrinho-total">
+                <a href="/CRUD_LPWEBI_TRABALHO/admin/index.php" class="btn btn-primary">ENTRAR</a>
                 <button onclick="javascript:location.href='/CRUD_LPWEBI_TRABALHO/publico/carrinho/carrinho.php'" class="btn btn-success">CARRINHO</button>
             </div>
             <div>
                 <form action="/CRUD_LPWEBI_TRABALHO/publico/produto/pesquisa_pelo_nome.php" method="get">
                     <label for="pesquisa"><strong>Pesquise o produto pelo nome</strong></label>
-                    <input type="text" name="pesquisa" id="pesquisa" placeholder="Nome do produto...">
+                    <input type="text" name="pesquisa" id="pesquisa" placeholder="Nome do produto">
                     <input type="submit" value="PESQUISAR" class="btn btn-secondary">
                 </form>
             </div>
-            
+            <br/>
             <div>
                 <h3>Escolha a categoria do produto</h3>
             </div>
+            <br/>
             <div>
                 <table class="table table-bordered table-hover">
                     <thead class="table-dark">
@@ -55,9 +57,6 @@
                 </table>
                 
             </div>
-        </div>
-        <div>
-            <a href="/CRUD_LPWEBI_TRABALHO/admin/index.php" class="btn btn-primary">ENTRAR</a>
         </div>
     </div>
 </body>

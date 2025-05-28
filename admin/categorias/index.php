@@ -16,16 +16,18 @@
     <h2>CATEGORIAS</h2>
     <div>
         <form action="categoria_cadastro.php" method="get">
-            <label for="nomeCategoria">Cadastrar Categoria</label>
+            <label for="nomeCategoria"><strong>Cadastrar Categoria</strong></label>
             <input type="text" name="nomeCategoria" id="nomeCategoria">
-            <input type="submit" value="CADASTRAR">
+            <input type="submit" value="CADASTRAR" class="btn btn-success">
         </form>
     </div>
+    <br/>
     <div>
-        <button onclick="javascript:document.location.href='categoria_consulta.php'">VER CATEGORIAS</button>
+        <button onclick="javascript:document.location.href='categoria_consulta.php'" class="btn btn-primary">VER CATEGORIAS</button>
     </div>
+    <br/>
     <div>
-        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/dashboard.php'">VOLTAR</button>
+        <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/dashboard.php'" class="btn btn-secondary">VOLTAR</button>
     </div>
     
     

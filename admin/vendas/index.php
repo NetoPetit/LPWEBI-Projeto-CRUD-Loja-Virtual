@@ -12,11 +12,13 @@
     ?>
     
     <div>
-            <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'">VOLTAR A LOJA</button>
+            <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/publico/index.php'" class="btn btn-secondary">VOLTAR A LOJA</button>
     </div>
+    <br/>
     <div>
-            <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/dashboard.php'">VOLTAR AO PAINEL</button>
+            <button onclick="javascript:document.location.href='/CRUD_LPWEBI_TRABALHO/admin/dashboard.php'" class="btn btn-primary">VOLTAR AO PAINEL</button>
     </div>
+    <br/>
 
     <h2>Histórico de Vendas</h2>
 
@@ -67,7 +69,7 @@
             echo "</ul>
                 <strong>Total: R$" . number_format($total, 2, ',', '.') . "</strong>
                 <br/>
-                <a href='venda_delete.php?venda_id=" . $venda['id'] . "'>APAGAR</a>
+                <a href='venda_delete.php?venda_id=" . $venda['id'] . "' class='btn btn-danger'>APAGAR</a>
             </div>";
         }
     ?>
